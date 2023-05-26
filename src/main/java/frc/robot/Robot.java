@@ -7,16 +7,19 @@ import edu.wpi.first.cscore.CvSink;
 import edu.wpi.first.cscore.CvSource;
 import edu.wpi.first.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+//import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.Constants.ArmConstants;
-import frc.robot.subsystems.Secondary.RotateSubsystem;
+import frc.robot.commands.Auto.Autos;
+//import frc.robot.subsystems.Secondary.RotateSubsystem;
 
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
+
+import com.pathplanner.lib.server.PathPlannerServer;
 
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.networktables.NetworkTableInstance;
@@ -132,7 +135,8 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousInit() {
-        m_autonomousCommand = m_robotContainer.getAutonomousCommand();
+        //m_autonomousCommand = m_robotContainer.getAutonomousCommand();
+        m_autonomousCommand = Autos.getAutonomousCommand();
 
         // schedule the autonomous command (example)
         if (m_autonomousCommand != null) {

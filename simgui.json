@@ -1,0 +1,18 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/Shuffleboard/Autonomous/SendableChooser[0]": "String Chooser",
+      "/Shuffleboard/Autonomous/SendableChooser[1]": "String Chooser",
+      "/SmartDashboard/Auto choices": "String Chooser",
+      "/SmartDashboard/Autonomous Mode": "String Chooser"
+    },
+    "windows": {
+      "/SmartDashboard/Autonomous Mode": {
+        "window": {
+          "visible": true
+        }
+      }
+    }
+  }
+}
